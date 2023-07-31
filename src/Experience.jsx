@@ -5,11 +5,9 @@ export default function Experience()
 {
 
     const computer = useGLTF('https://vazxmixjsiawhamofees.supabase.co/storage/v1/object/public/models/macbook/model.gltf')
-    // <OrbitControls maxAzimuthAngle={Math.PI/2} minAzimuthAngle={-Math.PI/2} enablePan={false} maxPolarAngle={Math.PI/2}/>
 
     const {viewport} = useThree()
     const isMobile = viewport.width < 5;
-    console.log(viewport.width)
 
     // Adjust positions based on the screen size
     const laptopPositionY = isMobile ? -1.2 : -1.4;
@@ -18,8 +16,8 @@ export default function Experience()
 
     return <>
         {/** Set up the controls and background */}
-        <color args={['#FFFFFF']} attach="background" />
-        <OrbitControls />
+        <color args={['#00000F']} attach="background" />
+        <OrbitControls maxAzimuthAngle={Math.PI/2} minAzimuthAngle={-Math.PI/2} enablePan={false} maxPolarAngle={Math.PI/2}/>
         
 
         {/** Add laptop to the scene and related elements */}
